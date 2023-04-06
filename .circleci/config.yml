@@ -4,6 +4,7 @@ jobs:
   build:
     machine: true
     steps:
+    - checkout
     - run: which docker
     - run: docker -v
     - run: docker build --tag throwaway:$CIRCLE_BUILD_NUM . 
